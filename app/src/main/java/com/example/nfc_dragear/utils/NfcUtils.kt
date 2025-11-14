@@ -1,4 +1,4 @@
-package com.example.nfc.dragear.utils
+package com.example.nfc_dragear.utils
 
 import android.content.Intent
 import android.nfc.NdefMessage

@@ -1,4 +1,4 @@
-package com.example.nfc.dragear
+package com.example.nfc_dragear
 
 import android.app.PendingIntent
 import android.content.Intent
@@ -13,10 +13,10 @@ import androidx.activity.compose.setContent
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.runtime.mutableStateListOf
 import androidx.compose.runtime.mutableStateOf
-import com.example.nfc.dragear.ui.MainScreen
+import com.example.nfc_dragear.ui.MainScreen
 import com.example.nfc_dragear.ui.theme.NFC_DragearTheme
-import com.example.nfc.dragear.utils.readFromTag
-import com.example.nfc.dragear.utils.writeToTag
+import com.example.nfc_dragear.utils.readFromTag
+import com.example.nfc_dragear.utils.writeToTag
 
 class MainActivity : ComponentActivity() {
 
@@ -27,9 +27,9 @@ class MainActivity : ComponentActivity() {
 
     // --- STATE ---
     // Mutable state for the URL input field
-    val urlState = mutableStateOf("https://open.spotify.com/track/...")
+    val urlState = mutableStateOf("")
     // Mutable state for the status log
-    val logState = mutableStateListOf("App started. Waiting for action.")
+    val logState = mutableStateListOf<String>()
     // Mutable state to track if we are in "Write" mode
     val isWriteMode = mutableStateOf(false)
 

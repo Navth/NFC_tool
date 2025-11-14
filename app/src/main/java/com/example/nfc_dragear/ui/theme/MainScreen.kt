@@ -1,4 +1,4 @@
-package com.example.nfc.dragear.ui
+package com.example.nfc_dragear.ui
 
 import android.widget.Toast
 import androidx.compose.foundation.BorderStroke
@@ -49,7 +49,7 @@ fun MainScreen(
     Scaffold(
         topBar = {
             TopAppBar(
-                title = { Text("Spotify NFC Tool") },
+                title = { Text("NFC Tool") },
                 colors = TopAppBarDefaults.topAppBarColors(
                     containerColor = MaterialTheme.colorScheme.primary,
                     titleContentColor = MaterialTheme.colorScheme.onPrimary
@@ -69,7 +69,7 @@ fun MainScreen(
                     .padding(16.dp)
             ) {
                 Text(
-                    "Spotify Share Link (URL)",
+                    "URL to Write",
                     style = MaterialTheme.typography.titleMedium
                 )
                 Spacer(modifier = Modifier.height(8.dp))
@@ -78,7 +78,7 @@ fun MainScreen(
                     value = urlState.value,
                     onValueChange = { urlState.value = it },
                     modifier = Modifier.fillMaxWidth(),
-                    placeholder = { Text("https://open.spotify.com/...") }
+                    placeholder = { Text("https://example.com/...") }
                 )
 
                 Spacer(modifier = Modifier.height(16.dp))
@@ -95,8 +95,7 @@ fun MainScreen(
                         },
                         modifier = Modifier
                             .weight(1f)
-                            .padding(end = 8.dp),
-                        colors = ButtonDefaults.buttonColors(containerColor = Color(0xFF1DB954)) // Spotify Green
+                            .padding(end = 8.dp)
                     ) {
                         Text("Prepare to Write")
                     }
